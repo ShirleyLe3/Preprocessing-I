@@ -134,3 +134,61 @@ html,
 body {
   height: 100%;
 }
+/* Variables */
+@font:'Lato', sans-serif;
+
+
+/* Mixins */
+
+
+.container {
+  width:90%;
+}
+
+
+nav {
+
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+
+
+
+
+
+.top {
+  width:80%;
+}
+
+.profile-pic {
+
+}
+
+h1 {
+
+}
+.top p {
+
+}
+
+
+
+
+
+
+.middle {
+
+}
+
+
+
+
+
+.bottom {
+
+}
