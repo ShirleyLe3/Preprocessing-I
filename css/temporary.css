@@ -57,38 +57,6 @@ html, body {
     height: 100%;
 }
 
-// Variables
-
-@heading-font: 'Baloo 2', cursive;
-@fontcolor: black;
-
-
-
-
-
-
-
-@hover-color: pink;
-
-
-
-
-// Mixins
-// .some-class {
-//     color: red;
-//     font-size: 14px;
-// }
-
-// .example-mixin {
-//     text-align: center;
-//     .some-class();
-// }
-
-
-
-
-
-
 
 
 
@@ -114,10 +82,10 @@ html, body {
 	  font-size: 2.8rem;
       text-decoration: none;
       color: black;
-      &:hover {
+      &:hover
+      font-color: @hover-color;
 
-	    font-color: @hover-color;
-	  }
+
 }
 
 
@@ -195,5 +163,4 @@ h3 {
     }
     .description {
         width: 50%;
-	}
-}
+    }
