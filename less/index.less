@@ -78,17 +78,15 @@ html, body {
 
 
 // Mixins
-// .some-class {
-//     color: red;
-//     font-size: 14px;
-// }
+.some-class {
+    color: red;
+    font-size: 14px;
+}
 
-// .example-mixin {
-//     text-align: center;
-//     .some-class();
-// }
-
-
+.example-mixin {
+    text-align: center;
+    .some-class();
+}
 
 
 
@@ -99,6 +97,12 @@ html, body {
 
 
 
+
+
+*{
+  background-color: thistle;
+  border: solid black 2px;     
+}
 
 
 .container {
@@ -128,7 +132,7 @@ header nav{
   justify-content: flex-end;
 }
 nav a{
-  color:steelblue;
+  color:blue;
   text-decoration:none;
   letter-spacing:3px;
 }
@@ -142,13 +146,14 @@ nav a:hover{
     @media( max-width: 500px ) {
       margin-left: 0;
     }
-
-/* .nav {
+  }
+ .nav {
       &:hover {
-/* 	    font-color: @hover-color; */
-	  }
-}
- */
+   color: @hover-color;
+      }
+    }
+
+
 
 
 
@@ -160,7 +165,7 @@ nav a:hover{
 	.divider {
 		width: 80%;
 	}
-/* } */
+
 
 .profile-pic {
     height: 200px;
@@ -169,8 +174,7 @@ nav a:hover{
 
 
 .button {
-    color: ;
-    border: 2px solid black;
+    border: solid black 2px;
     padding:1rem 2rem;
     display: inline-block;
     text-align: center;
@@ -210,4 +214,5 @@ h3 {
     }
  .description {
         width: 50%;
-	} 
+  } 
+  
