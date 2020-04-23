@@ -134,17 +134,16 @@ html,
 body {
   height: 100%;
 }
-.some-class {
-  color: red;
+.center {
+  text-align: center;
   font-size: 14px;
 }
-.example-mixin {
-  text-align: center;
-  color: red;
-  font-size: 14px;
+.flexbox {
+  display: flex;
+  justify-content: space-between;
 }
 * {
-  background-color: thistle;
+  background-color: grey;
   border: solid black 2px;
 }
 .container {
@@ -181,9 +180,6 @@ nav a:hover {
   .nav {
     margin-left: 0;
   }
-}
-.nav:hover {
-  color: pink;
 }
 .top {
   width: 90%;
