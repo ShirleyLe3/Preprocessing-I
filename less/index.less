@@ -66,163 +66,169 @@ html, body {
 
 // Variables
 
-@heading-font: 'Baloo 2', cursive;
-@color-1: #3C4245;
-@color-2: #5F6769;
+@heading-font: 'Georgia', cursive;
+@color-1: hsl(0, 1%, 21%);
+@color-2: #232020;
 @color-3: #719192;
 @color-4: #DFCDC3;
+@color-6: #4d4646;
+// @color-7: #232020; #5b5656; rgb(47, 49, 58), #252525
 
 
-
-
-
-// Mixins  {
-//   text-align: center;
-//   .some-class();
-// }
-// @mixin box-shadow(.3, .6) {
-//   rgba(white, .3) 0 1px 1, 
-//   rgba(black, .6) 0 1px 0 inset;
-// }
-
-
-.center {
-    text-align: center;
-    font-size: 14px;
+.padding {
+    padding: 3% 0%;
 }
 
+.center {
+  display: flex;
+  // justify-content: center;
+  align-items: center;
+}
 
-.flexbox {
+.flex-row {
   display: flex;
   justify-content:space-between; 
 }
 
+.flex-column {
+  display: flex;
+  flex-direction:column; 
+}
 
 
-
-
-
-
-// .custom-btn(@bgcolour:orange, @width:200px, @fontcolour:blue){
-//  display: block;
-//  background-color: @bgcolour;
-//  margin: 0 10px 20px;
-//  cursor: pointer;
-//  width: @width;
-//  height: 45px;
-//  font-size: 2rem;
-//  border-radius: 10px;
-//  color:@fontcolour; 
-
-
+.box-shadow {
+  border: 1px solid;
+  border-radius: 25px;
+  padding: 10% 2%;
+  box-shadow: 5px 10px @color-6;
+  background-color: @color-1;
+  margin: 10% 0%;
+}
+// -------------------------------------------------------------------------------------------------------
 
 
 *{
-  background-color:grey;
-  border: solid black 2px;     
+  background-color: @color-2;
+  color: @color-4;    
 }
 
 
 .container {
-  width: 80%;
+  padding: 0% 8% 5% 8%;
+
+}
+
+
+.header{
+  height:60vh; 
+  background-color: @color-1;
+  .box-shadow();
+}
+
+
+.top {
+    color:@color-1;
 }
 
 
 
-header{
-/*   height:90vh; */
-  background-color: lightsteelblue;
-}
-
-
-
-
-
-  
   
 .links{
-  width:100%;
-  display:flex;
-  justify-content:space-evenly;
-  justify-content: flex-end;
+  width:50%;
+  .flex-row();
+  .padding();
 }
+
 nav a{
-  color:blue;
+  color: @color-4;
   text-decoration:none;
-  letter-spacing:3px;
+  align-items: right;
 }
 nav a:hover{
-  color:#AFEEEE;
+  color:@color-3;
 }
-
-.nav {
-    margin-left: 62px;
-
-    @media( max-width: 500px ) {
-      margin-left: 0;
-    }
-  }
-//  .nav {
-//       &:hover {
-//    color: @color-1;
-//       }
-//     }
-
-
 
 
 
 .top-title {
-	width: 90%;}
+	width: 90%;
 	.p {
 		font-family: @heading-font;
 	}
 	.divider {
-		width: 80%;
+		width: 100%;
 	}
-
-
-.profile-pic {
-    height: 200px;
-	width: 50%;
 }
 
 
 #button {
-    border: solid black 2px;
+    border: solid @color-4 2px;
     padding:1rem 2rem;
     display: inline-block;
     text-align: center;
     font-weight: bold;
+    text-decoration:none;
+    color:@color-4;
 }
+
+#button:hover, #button a:hover{
+    border: solid @color-4 2px;
+    background-color:@color-4;
+    color:@color-2;
+}
+
+
+
+
+
+.introduction {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: column;
+
+}
+
+.intro, .skills {
+  background-color:@color-1;
+  width: 50%;
+  .skills {
+    .center();
+  }
+}
+
 
 
 
 h1 {
-    font-family: @heading-font;
-    font-size: 20px;
+  font-family: @heading-font;
+  font-size: 4rem;
 }
 h2 {
-	font-size: 1rem;
+  font-size: 1.5rem;
 }
 h3 {
-	font-size: .8rem;
-	font-weight: bold;
+  font-size: 1rem;
+  font-weight: bold;
+  .center();
 }
+.experience, .position, h2, h3, h4, .description, .description p {
+  background-color: @color-1;
+  padding-bottom: 1rem;
 
 
-.work-history{
-  background-color:lightgray;
-}
 .work-history h2{
   text-align:center;
   font-size: 1.5rem;
 }
+}
+.work-history{
+  .box-shadow();
+}
+
 
 
 .experience{
-  display:flex;
-  justify-content:space-between;
+    .flex-row();
 }
 
  .position {
@@ -232,3 +238,14 @@ h3 {
         width: 50%;
   } 
   
+
+
+
+
+
+  
+  .contact {
+      .flex-column();
+      line-height: 1rem;
+      .padding();
+  }
