@@ -67,10 +67,12 @@ html, body {
 // Variables
 
 @heading-font: 'Georgia', cursive;
-@color-1: hsl(0, 1%, 21%);
+@italics: italic;
+@color-1: hsl(240, 2%, 25%);
 @color-2: #232020;
 @color-3: #719192;
 @color-4: #DFCDC3;
+@color-5: rgba(40, 60, 233, 0.637);
 @color-6: #4d4646;
 // @color-7: #232020; #5b5656; rgb(47, 49, 58), #252525
 
@@ -122,15 +124,16 @@ html, body {
 .header{
   height:60vh; 
   background-color: @color-1;
+  border-radius: 25px;
   .box-shadow();
+  
 }
+
 
 
 .top {
-    color:@color-1;
+    border-radius: 25px;
 }
-
-
 
   
 .links{
@@ -151,13 +154,13 @@ nav a:hover{
 
 
 .top-title {
-	width: 90%;
+	width: 100%;
 	.p {
 		font-family: @heading-font;
 	}
-	.divider {
-		width: 100%;
-	}
+	// .divider {
+	// 	width: 900px;
+	// }
 }
 
 
@@ -182,19 +185,20 @@ nav a:hover{
 
 
 .introduction {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: column;
-
+    .flex-row();
+    line-height: 1.5rem;
 }
 
 .intro, .skills {
   background-color:@color-1;
+  font-style: @italics;
   width: 50%;
-  .skills {
-    .center();
-  }
 }
+  .skills{
+    padding-left: 10%;
+    background-color: @color-2;
+    
+  }
 
 
 
@@ -211,7 +215,10 @@ h3 {
   font-weight: bold;
   .center();
 }
-.experience, .position, h2, h3, h4, .description, .description p {
+h4 {
+  font-style: @italics;
+}
+.experience, .position, .position h2, h2, h3, h4, .description, .description p {
   background-color: @color-1;
   padding-bottom: 1rem;
 
@@ -223,12 +230,14 @@ h3 {
 }
 .work-history{
   .box-shadow();
+  background-color: @color-2;
 }
 
 
 
 .experience{
     .flex-row();
+  
 }
 
  .position {
@@ -240,12 +249,7 @@ h3 {
   
 
 
-
-
-
-  
   .contact {
       .flex-column();
-      line-height: 1rem;
       .padding();
   }

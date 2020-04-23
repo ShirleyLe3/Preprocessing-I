@@ -154,7 +154,7 @@ body {
   border-radius: 25px;
   padding: 10% 2%;
   box-shadow: 5px 10px #4d4646;
-  background-color: hsl(0, 1%, 21%);
+  background-color: hsl(240, 2%, 25%);
   margin: 10% 0%;
 }
 * {
@@ -170,11 +170,11 @@ body {
   border-radius: 25px;
   padding: 10% 2%;
   box-shadow: 5px 10px #4d4646;
-  background-color: hsl(0, 1%, 21%);
+  background-color: hsl(240, 2%, 25%);
   margin: 10% 0%;
 }
 .top {
-  color: hsl(0, 1%, 21%);
+  border-radius: 25px;
 }
 .links {
   width: 50%;
@@ -191,13 +191,10 @@ nav a:hover {
   color: #719192;
 }
 .top-title {
-  width: 90%;
+  width: 100%;
 }
 .top-title .p {
   font-family: 'Georgia', cursive;
-}
-.top-title .divider {
-  width: 100%;
 }
 #button {
   border: solid #DFCDC3 2px;
@@ -216,18 +213,18 @@ nav a:hover {
 }
 .introduction {
   display: flex;
-  justify-content: space-evenly;
-  flex-wrap: column;
+  justify-content: space-between;
+  line-height: 1.5rem;
 }
 .intro,
 .skills {
-  background-color: hsl(0, 1%, 21%);
+  background-color: hsl(240, 2%, 25%);
+  font-style: italic;
   width: 50%;
 }
-.intro .skills,
-.skills .skills {
-  display: flex;
-  align-items: center;
+.skills {
+  padding-left: 10%;
+  background-color: #232020;
 }
 h1 {
   font-family: 'Georgia', cursive;
@@ -242,18 +239,23 @@ h3 {
   display: flex;
   align-items: center;
 }
+h4 {
+  font-style: italic;
+}
 .experience,
 .position,
+.position h2,
 h2,
 h3,
 h4,
 .description,
 .description p {
-  background-color: hsl(0, 1%, 21%);
+  background-color: hsl(240, 2%, 25%);
   padding-bottom: 1rem;
 }
 .experience .work-history h2,
 .position .work-history h2,
+.position h2 .work-history h2,
 h2 .work-history h2,
 h3 .work-history h2,
 h4 .work-history h2,
@@ -267,8 +269,9 @@ h4 .work-history h2,
   border-radius: 25px;
   padding: 10% 2%;
   box-shadow: 5px 10px #4d4646;
-  background-color: hsl(0, 1%, 21%);
+  background-color: hsl(240, 2%, 25%);
   margin: 10% 0%;
+  background-color: #232020;
 }
 .experience {
   display: flex;
@@ -283,6 +286,5 @@ h4 .work-history h2,
 .contact {
   display: flex;
   flex-direction: column;
-  line-height: 1rem;
   padding: 3% 0%;
 }
