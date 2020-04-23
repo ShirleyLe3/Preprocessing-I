@@ -51,9 +51,186 @@ table {
 /* Set every element's box-sizing to border-box */
 * {
     box-sizing: border-box;
+
 }
 
 html, body {
     height: 100%;
 }
 
+
+
+
+
+
+
+// Variables
+
+@heading-font: 'Baloo 2', cursive;
+@color-1: #3C4245;
+@color-2: #5F6769;
+@color-3: #719192;
+@color-4: #DFCDC3;
+
+
+
+
+
+// Mixins  {
+//   text-align: center;
+//   .some-class();
+// }
+// @mixin box-shadow(.3, .6) {
+//   rgba(white, .3) 0 1px 1, 
+//   rgba(black, .6) 0 1px 0 inset;
+// }
+
+
+.center {
+    text-align: center;
+    font-size: 14px;
+}
+
+
+.flexbox {
+  display: flex;
+  justify-content:space-between; 
+}
+
+
+
+
+
+
+
+// .custom-btn(@bgcolour:orange, @width:200px, @fontcolour:blue){
+//  display: block;
+//  background-color: @bgcolour;
+//  margin: 0 10px 20px;
+//  cursor: pointer;
+//  width: @width;
+//  height: 45px;
+//  font-size: 2rem;
+//  border-radius: 10px;
+//  color:@fontcolour; 
+
+
+
+
+*{
+  background-color:grey;
+  border: solid black 2px;     
+}
+
+
+.container {
+  width: 80%;
+}
+
+header{
+/*   height:90vh; */
+  background-color: lightsteelblue;
+}
+
+
+header nav{
+  width:100%;
+  background-color:#fde769;
+  display:flex;
+  justify-content:space-between;
+}
+  
+  
+  
+ 
+.links{
+  width:100%;
+  display:flex;
+  justify-content:space-evenly;
+  justify-content: flex-end;
+}
+nav a{
+  color:blue;
+  text-decoration:none;
+  letter-spacing:3px;
+}
+nav a:hover{
+  color:#AFEEEE;
+}
+
+.nav {
+    margin-left: 62px;
+
+    @media( max-width: 500px ) {
+      margin-left: 0;
+    }
+  }
+//  .nav {
+//       &:hover {
+//    color: @color-1;
+//       }
+//     }
+
+
+
+
+
+.top {
+	width: 90%;}
+	.p {
+		font-family: @heading-font;
+	}
+	.divider {
+		width: 80%;
+	}
+
+
+.profile-pic {
+    height: 200px;
+	width: 50%;
+}
+
+
+.button {
+    border: solid black 2px;
+    padding:1rem 2rem;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+h1 {
+    font-family: @heading-font;
+    font-size: 20px;
+}
+h2 {
+	font-size: 1rem;
+}
+h3 {
+	font-size: .8rem;
+	font-weight: bold;
+}
+
+
+#bottom{
+  background-color:lightgray;
+}
+#bottom h2{
+  text-align:center;
+  font-size: 1.5rem;
+}
+
+
+.experience{
+  display:flex;
+  justify-content:space-between;
+}
+
+ .position {
+        width: 30%;
+    }
+ .description {
+        width: 50%;
+  } 
+  
